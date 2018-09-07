@@ -9,7 +9,7 @@ namespace FlatMessageBox
 {
     public class InputBox
     {
-        public static string Show(IWin32Window ventana, string title , string Question)
+        public static string Show(IWin32Window ventana, string title , string Question, bool ShowCancelButton= false)
         {
             string resultado;
             FlatInputBox Input = new FlatInputBox();
@@ -18,6 +18,7 @@ namespace FlatMessageBox
             Input.btnAcept.DialogResult = DialogResult.OK;
             Input.btnCancel.DialogResult = DialogResult.Cancel;
             Input.ShowDialog(ventana);
+            Input.btnCancel.Visible = (ShowCancelButton) ? true : false;
             resultado = Input.inputdata.Text;
 
             return resultado;

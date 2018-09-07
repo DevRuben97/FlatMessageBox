@@ -37,5 +37,15 @@ namespace FlatMessageBox
                 inputdata.Text = "Ingresar Texto";
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

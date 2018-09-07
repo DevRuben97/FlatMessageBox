@@ -30,8 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -76,25 +79,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\error.png" />
+    <None Include="Resources\information.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\info.png" />
+    <None Include="Resources\Error.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\success.png" />
+    <None Include="Resources\Success.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\warning.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stop-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\779b9dc3928c2dbc304bcf6702bef6df.gif" />
+    <None Include="Resources\Warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

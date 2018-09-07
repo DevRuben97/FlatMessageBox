@@ -16,13 +16,13 @@ namespace FlatMessageBox
             DialogResult resultado;
 
             FlatMessageBox mensaje = new FlatMessageBox();
-            Form sombra = new Form(); // Fondo Negro Para diferenciar el contenido del message box.
+           /* Form sombra = new Form(); // Fondo Negro Para diferenciar el contenido del message box.
             sombra.WindowState = FormWindowState.Maximized;
             sombra.BackColor = Color.Black;
             sombra.FormBorderStyle = FormBorderStyle.None;
             sombra.Opacity = 0.8;
             sombra.TopMost = true;
-            sombra.Show();
+            sombra.Show();*/
             if (body.Length > 57)
             {
                 body = body.Insert(body.LastIndexOf(body), "\n");
@@ -60,34 +60,34 @@ namespace FlatMessageBox
             switch (iconos) // Evaluar el icono seleccionado por el desarrollador y despues lanzar el cuadro de dialogo
             {
                 case MessageBoxIcon.Error:
-                    mensaje.IconImage.Image = Properties.Resources.error;
+                    mensaje.IconImage.Image = Properties.Resources.Error;
                     SystemSounds.Exclamation.Play();
                     resultado = mensaje.ShowDialog(ventana);
-                    sombra.Close();
+                   // sombra.Close();
                     break;
                 case MessageBoxIcon.Question:
-                    mensaje.IconImage.Image = Properties.Resources.info;
+                    mensaje.IconImage.Image = Properties.Resources.information;
                     SystemSounds.Question.Play();
                     resultado = mensaje.ShowDialog(ventana);
-                    sombra.Close();
+                    //sombra.Close();
                     break;
                 case MessageBoxIcon.Information:
-                    mensaje.IconImage.Image = Properties.Resources.success;
+                    mensaje.IconImage.Image = Properties.Resources.Success;
                     SystemSounds.Asterisk.Play();
                     resultado = mensaje.ShowDialog(ventana);
-                    sombra.Close();
+                   // sombra.Close();
                     break;
                 case MessageBoxIcon.Warning:
-                    mensaje.IconImage.Image = Properties.Resources.warning;
+                    mensaje.IconImage.Image = Properties.Resources.Warning;
                     SystemSounds.Exclamation.Play();
                     resultado = mensaje.ShowDialog(ventana);
-                    sombra.Close();
+                    //sombra.Close();
                     break;
                 default:
-                    mensaje.IconImage.Image = Properties.Resources.success;
+                    mensaje.IconImage.Image = Properties.Resources.Success;
                     SystemSounds.Asterisk.Play();
                     resultado = mensaje.ShowDialog(ventana);
-                    sombra.Close();
+                   // sombra.Close();
                     break;              
             }
             
@@ -99,20 +99,20 @@ namespace FlatMessageBox
         {
             DialogResult resultado;
             FlatMessageBox mensaje = new FlatMessageBox();
-            Form sombra = new Form(); //Formulario en negro para simular una sombra
+            /*Form sombra = new Form(); //Formulario en negro para simular una sombra
             sombra.WindowState = FormWindowState.Maximized;
             sombra.BackColor = Color.Black;
             sombra.FormBorderStyle = FormBorderStyle.None;
             sombra.Opacity = 0.8;
             sombra.TopMost = true;
-            sombra.Show();
+            sombra.Show();*/
             if (Body.Length > 57)
             {
                 Body = Body.Insert(Body.LastIndexOf(Body), "\n");
             }
             mensaje.Title.Text = "Atención:";
             mensaje.DataShow.Text = Body;
-            mensaje.IconImage.Image = Properties.Resources.warning;
+            mensaje.IconImage.Image = Properties.Resources.Warning;
             mensaje.btnAcept.Visible = false;
             mensaje.btnCancel.Text = "Aceptar";
             mensaje.btnCancel.BackColor = Color.FromArgb(0, 120, 215);
@@ -121,7 +121,7 @@ namespace FlatMessageBox
             mensaje.BodyText.Height = 38;
             SystemSounds.Beep.Play();
             resultado = mensaje.ShowDialog(vantana);
-            sombra.Close();
+          //  sombra.Close();
 
             return resultado;
         }
