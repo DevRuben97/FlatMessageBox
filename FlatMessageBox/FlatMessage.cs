@@ -11,6 +11,15 @@ namespace FlatMessageBox
 {
     public class FlatMessage
     {
+        /// <summary>
+        /// Custom Message box Developed by: Ruben Alexander Batista Santos.
+        /// </summary>
+        /// <param name="ventana"></param>
+        /// <param name="title"></param>
+        /// <param name="body"></param>
+        /// <param name="botones"></param>
+        /// <param name="iconos"></param>
+        /// <returns></returns>
         public static DialogResult Show(IWin32Window ventana, string title, string body, MessageBoxButtons botones, MessageBoxIcon iconos)
         {
             DialogResult resultado;
@@ -23,13 +32,9 @@ namespace FlatMessageBox
             sombra.Opacity = 0.8;
             sombra.TopMost = true;
             sombra.Show();*/
-            if (body.Length > 57)
-            {
-                body = body.Insert(body.LastIndexOf(body), "\n");
-            }
             
             mensaje.Title.Text = title;
-            mensaje.DataShow.Text = body;
+            mensaje.txtBodyText.Text = body;
             switch (botones) // Evaluar el boton elegido por el desarrollador
             {
                 case MessageBoxButtons.YesNo:
@@ -106,19 +111,15 @@ namespace FlatMessageBox
             sombra.Opacity = 0.8;
             sombra.TopMost = true;
             sombra.Show();*/
-            if (Body.Length > 57)
-            {
-                Body = Body.Insert(Body.LastIndexOf(Body), "\n");
-            }
+
+
             mensaje.Title.Text = "Atención:";
-            mensaje.DataShow.Text = Body;
+            mensaje.txtBodyText.Text = Body;
             mensaje.IconImage.Image = Properties.Resources.Warning;
             mensaje.btnAcept.Visible = false;
             mensaje.btnCancel.Text = "Aceptar";
             mensaje.btnCancel.BackColor = Color.FromArgb(0, 120, 215);
             mensaje.btnCancel.DialogResult = DialogResult.OK;
-            mensaje.BodyText.Width = 390;
-            mensaje.BodyText.Height = 38;
             SystemSounds.Beep.Play();
             resultado = mensaje.ShowDialog(vantana);
           //  sombra.Close();
