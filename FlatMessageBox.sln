@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatMessageBox", "FlatMessageBox\FlatMessageBox.csproj", "{9505825C-BDCB-4F05-ADC4-DD2CD7D7FD3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{BB5CBFF6-9E5D-4259-A211-64B22F9A83AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{9505825C-BDCB-4F05-ADC4-DD2CD7D7FD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9505825C-BDCB-4F05-ADC4-DD2CD7D7FD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9505825C-BDCB-4F05-ADC4-DD2CD7D7FD3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5CBFF6-9E5D-4259-A211-64B22F9A83AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5CBFF6-9E5D-4259-A211-64B22F9A83AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5CBFF6-9E5D-4259-A211-64B22F9A83AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5CBFF6-9E5D-4259-A211-64B22F9A83AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C16B3E41-4EAC-4950-8554-EC4824BE9DF9}
 	EndGlobalSection
 EndGlobal

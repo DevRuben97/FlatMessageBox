@@ -45,20 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlatInputBox.cs">
+    <Compile Include="Forms\FlatInputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FlatInputBox.Designer.cs">
+    <Compile Include="Forms\FlatInputBox.Designer.cs">
       <DependentUpon>FlatInputBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FlatMessage.cs" />
-    <Compile Include="FlatMessageBox.cs">
+    <Compile Include="Forms\LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FlatMessageBox.Designer.cs">
+    <Compile Include="Forms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\FlatMessage.cs" />
+    <Compile Include="Forms\FlatMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FlatMessageBox.Designer.cs">
       <DependentUpon>FlatMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputBox.cs" />
+    <Compile Include="Functions\InputBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -67,11 +73,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FlatInputBox.resx">
+    <EmbeddedResource Include="Forms\FlatInputBox.resx">
       <DependentUpon>FlatInputBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FlatMessageBox.resx">
+    <EmbeddedResource Include="Forms\FlatMessageBox.resx">
       <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingImage.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

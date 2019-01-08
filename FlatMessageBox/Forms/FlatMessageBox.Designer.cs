@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtBodyText = new System.Windows.Forms.TextBox();
             this.IconImage = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAcept = new System.Windows.Forms.Button();
-            this.txtBodyText = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconImage)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 228);
             this.panel1.TabIndex = 0;
+            // 
+            // txtBodyText
+            // 
+            this.txtBodyText.BackColor = System.Drawing.Color.White;
+            this.txtBodyText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBodyText.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtBodyText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBodyText.Location = new System.Drawing.Point(34, 111);
+            this.txtBodyText.Multiline = true;
+            this.txtBodyText.Name = "txtBodyText";
+            this.txtBodyText.ReadOnly = true;
+            this.txtBodyText.Size = new System.Drawing.Size(376, 72);
+            this.txtBodyText.TabIndex = 11;
+            this.txtBodyText.Text = "This is a example text pablo ramirez eeooe comdododfdfdff";
             // 
             // IconImage
             // 
@@ -103,19 +117,6 @@
             this.btnAcept.TabIndex = 9;
             this.btnAcept.Text = "Aceptar";
             this.btnAcept.UseVisualStyleBackColor = false;
-            // 
-            // txtBodyText
-            // 
-            this.txtBodyText.BackColor = System.Drawing.Color.White;
-            this.txtBodyText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBodyText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBodyText.Location = new System.Drawing.Point(34, 111);
-            this.txtBodyText.Multiline = true;
-            this.txtBodyText.Name = "txtBodyText";
-            this.txtBodyText.ReadOnly = true;
-            this.txtBodyText.Size = new System.Drawing.Size(376, 72);
-            this.txtBodyText.TabIndex = 11;
-            this.txtBodyText.Text = "This is a example text pablo ramirez eeooe comdododfdfdff";
             // 
             // FlatMessageBox
             // 
