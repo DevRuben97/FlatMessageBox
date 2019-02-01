@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnclose = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
-            this.txtquestion = new System.Windows.Forms.Label();
-            this.inputdata = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtquestion = new System.Windows.Forms.TextBox();
+            this.txtinputdata = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAcept = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.btnclose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,19 +53,23 @@
             this.panel1.Size = new System.Drawing.Size(483, 30);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnclose
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtquestion);
-            this.panel2.Controls.Add(this.inputdata);
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.btnAcept);
-            this.panel2.Controls.Add(this.shapeContainer1);
-            this.panel2.Location = new System.Drawing.Point(3, 29);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(477, 213);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnclose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnclose.FlatAppearance.BorderSize = 0;
+            this.btnclose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnclose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(444, 0);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(39, 30);
+            this.btnclose.TabIndex = 13;
+            this.btnclose.Text = "X";
+            this.btnclose.UseVisualStyleBackColor = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // Title
             // 
@@ -78,30 +82,46 @@
             this.Title.TabIndex = 12;
             this.Title.Text = "Titulo";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtquestion);
+            this.panel2.Controls.Add(this.txtinputdata);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.btnAcept);
+            this.panel2.Controls.Add(this.shapeContainer1);
+            this.panel2.Location = new System.Drawing.Point(3, 29);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(477, 213);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // txtquestion
             // 
-            this.txtquestion.AutoSize = true;
-            this.txtquestion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquestion.ForeColor = System.Drawing.Color.Black;
-            this.txtquestion.Location = new System.Drawing.Point(22, 92);
+            this.txtquestion.BackColor = System.Drawing.Color.White;
+            this.txtquestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtquestion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquestion.Location = new System.Drawing.Point(26, 61);
+            this.txtquestion.Multiline = true;
             this.txtquestion.Name = "txtquestion";
-            this.txtquestion.Size = new System.Drawing.Size(70, 16);
-            this.txtquestion.TabIndex = 13;
-            this.txtquestion.Text = "Pregunta:";
+            this.txtquestion.ReadOnly = true;
+            this.txtquestion.Size = new System.Drawing.Size(432, 54);
+            this.txtquestion.TabIndex = 18;
+            this.txtquestion.Text = "Pregunta";
+            this.txtquestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // inputdata
+            // txtinputdata
             // 
-            this.inputdata.BackColor = System.Drawing.Color.White;
-            this.inputdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.inputdata.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputdata.ForeColor = System.Drawing.Color.Black;
-            this.inputdata.Location = new System.Drawing.Point(25, 123);
-            this.inputdata.MaxLength = 100;
-            this.inputdata.Multiline = true;
-            this.inputdata.Name = "inputdata";
-            this.inputdata.Size = new System.Drawing.Size(436, 29);
-            this.inputdata.TabIndex = 16;
-            this.inputdata.Text = "Ingresar Texto";
+            this.txtinputdata.BackColor = System.Drawing.Color.White;
+            this.txtinputdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtinputdata.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtinputdata.ForeColor = System.Drawing.Color.Black;
+            this.txtinputdata.Location = new System.Drawing.Point(26, 128);
+            this.txtinputdata.MaxLength = 100;
+            this.txtinputdata.Name = "txtinputdata";
+            this.txtinputdata.Size = new System.Drawing.Size(436, 26);
+            this.txtinputdata.TabIndex = 16;
+            this.txtinputdata.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCancel
             // 
@@ -147,28 +167,10 @@
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 29;
-            this.lineShape1.X2 = 460;
-            this.lineShape1.Y1 = 155;
-            this.lineShape1.Y2 = 155;
-            // 
-            // btnclose
-            // 
-            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnclose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnclose.FlatAppearance.BorderSize = 0;
-            this.btnclose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnclose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(444, 0);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(39, 30);
-            this.btnclose.TabIndex = 13;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = true;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            this.lineShape1.X1 = 26;
+            this.lineShape1.X2 = 457;
+            this.lineShape1.Y1 = 156;
+            this.lineShape1.Y2 = 156;
             // 
             // FlatInputBox
             // 
@@ -196,12 +198,12 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Label txtquestion;
-        public System.Windows.Forms.TextBox inputdata;
+        public System.Windows.Forms.TextBox txtinputdata;
         public System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Button btnAcept;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Button btnclose;
+        public System.Windows.Forms.TextBox txtquestion;
     }
 }

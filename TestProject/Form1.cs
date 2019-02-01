@@ -37,5 +37,10 @@ namespace TestProject
             
             
         }
+
+        private void btnInputBox_Click(object sender, EventArgs e)
+        {
+            string mensaje = FlatMessageBox.InputBox.Show(this, "Test", "this is a test for the inputbox", false, "Truco");
+        }
     }
 }

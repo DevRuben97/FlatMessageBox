@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnMostar = new System.Windows.Forms.Button();
+            this.btnInputBox = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,11 +52,22 @@
             this.btnMostar.UseVisualStyleBackColor = true;
             this.btnMostar.Click += new System.EventHandler(this.btnMostar_Click);
             // 
+            // btnInputBox
+            // 
+            this.btnInputBox.Location = new System.Drawing.Point(16, 73);
+            this.btnInputBox.Name = "btnInputBox";
+            this.btnInputBox.Size = new System.Drawing.Size(103, 23);
+            this.btnInputBox.TabIndex = 2;
+            this.btnInputBox.Text = "Input Box";
+            this.btnInputBox.UseVisualStyleBackColor = true;
+            this.btnInputBox.Click += new System.EventHandler(this.btnInputBox_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 264);
+            this.Controls.Add(this.btnInputBox);
             this.Controls.Add(this.btnMostar);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMostar;
+        private System.Windows.Forms.Button btnInputBox;
     }
 }
 

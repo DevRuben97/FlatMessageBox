@@ -9,22 +9,29 @@ namespace FlatMessageBox
 {
     public class InputBox
     {
-        public static string Show(IWin32Window ventana, string title , string Question, bool ShowCancelButton= false)
+        public static InputResult Show(IWin32Window ventana, string title , string Question, bool ShowCancelButton=false,string DefaultValue= null)
         {
-            string resultado;
             FlatInputBox Input = new FlatInputBox();
+            InputResult result = new InputResult();
+
             Input.Title.Text = title;
             Input.txtquestion.Text = Question;
             Input.btnAcept.DialogResult = DialogResult.OK;
             Input.btnCancel.DialogResult = DialogResult.Cancel;
-            Input.ShowDialog(ventana);
             Input.btnCancel.Visible = (ShowCancelButton) ? true : false;
-            resultado = Input.inputdata.Text;
+            Input.txtinputdata.Text = DefaultValue;
+            result.Canceled = (Input.ShowDialog(ventana) == DialogResult.OK) ? false : true;
+            result.Data = Input.txtinputdata.Text;
 
-            return resultado;
+            return result;
             
 
                 
         }
+    }
+    public class InputResult
+    {
+        public string Data { get; set; }
+        public bool Canceled { get; set; }
     }
 }

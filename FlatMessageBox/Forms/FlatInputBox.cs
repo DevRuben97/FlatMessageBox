@@ -24,18 +24,12 @@ namespace FlatMessageBox
 
         private void inputdata_Enter(object sender, EventArgs e)
         {
-           if(inputdata.Text.Equals("Ingresar Texto"))
-            {
-                inputdata.Clear();
-            }
+
         }
 
         private void inputdata_Leave(object sender, EventArgs e)
         {
-            if (inputdata.Text.Equals(""))
-            {
-                inputdata.Text = "Ingresar Texto";
-            }
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
