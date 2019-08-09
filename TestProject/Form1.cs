@@ -27,20 +27,25 @@ namespace TestProject
 
         private void btnMostar_Click(object sender, EventArgs e)
         {
-            FlatMessageBox.LoadingForm loading = new FlatMessageBox.LoadingForm(save);
-            
-            loading.ShowDialog(this);
-            loading.InClose = new FlatMessageBox.LoadingForm.DoClose(() =>
-             {
-                 FlatMessageBox.FlatMessage.Show(this, "Mensaje Probado Correctamente");
-             });
-            
+
+            FlatMessageBox.FlatMessage.Show(this, "Test Message", "This is a test message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             
         }
 
         private void btnInputBox_Click(object sender, EventArgs e)
         {
-            string mensaje = FlatMessageBox.InputBox.Show(this, "Test", "this is a test for the inputbox", false, "Truco");
+            string mensaje = FlatMessageBox.InputBox.Show(this, "Test", "this is a test for the inputbox", false, true, "Truco").Data;
+        }
+
+        private void BtnLoading_Click(object sender, EventArgs e)
+        {
+            FlatMessageBox.LoadingForm loading = new FlatMessageBox.LoadingForm(save);
+
+            loading.ShowDialog(this);
+            loading.InClose = new FlatMessageBox.LoadingForm.DoClose(() =>
+            {
+                FlatMessageBox.FlatMessage.Show(this, "Mensaje Probado Correctamente");
+            });
         }
     }
 }

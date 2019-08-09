@@ -31,9 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBodyText = new System.Windows.Forms.TextBox();
             this.IconImage = new System.Windows.Forms.PictureBox();
-            this.Title = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAcept = new System.Windows.Forms.Button();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconImage)).BeginInit();
             this.SuspendLayout();
@@ -41,9 +41,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtTitle);
             this.panel1.Controls.Add(this.txtBodyText);
             this.panel1.Controls.Add(this.IconImage);
-            this.panel1.Controls.Add(this.Title);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAcept);
             this.panel1.Location = new System.Drawing.Point(3, 5);
@@ -68,23 +68,12 @@
             // IconImage
             // 
             this.IconImage.Image = global::FlatMessageBox.Properties.Resources.information;
-            this.IconImage.Location = new System.Drawing.Point(174, 19);
+            this.IconImage.Location = new System.Drawing.Point(185, 12);
             this.IconImage.Name = "IconImage";
             this.IconImage.Size = new System.Drawing.Size(67, 61);
             this.IconImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.IconImage.TabIndex = 7;
             this.IconImage.TabStop = false;
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.ForeColor = System.Drawing.Color.Black;
-            this.Title.Location = new System.Drawing.Point(159, 83);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(97, 25);
-            this.Title.TabIndex = 6;
-            this.Title.Text = "Atención:";
             // 
             // btnCancel
             // 
@@ -118,6 +107,20 @@
             this.btnAcept.Text = "Aceptar";
             this.btnAcept.UseVisualStyleBackColor = false;
             // 
+            // txtTitle
+            // 
+            this.txtTitle.BackColor = System.Drawing.Color.White;
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTitle.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(34, 79);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.ReadOnly = true;
+            this.txtTitle.Size = new System.Drawing.Size(376, 26);
+            this.txtTitle.TabIndex = 12;
+            this.txtTitle.Text = "Atencion:";
+            this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FlatMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,9 +145,9 @@
 
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox IconImage;
-        public System.Windows.Forms.Label Title;
         public System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Button btnAcept;
         public System.Windows.Forms.TextBox txtBodyText;
+        public System.Windows.Forms.TextBox txtTitle;
     }
 }

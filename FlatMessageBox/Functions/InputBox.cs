@@ -9,21 +9,25 @@ namespace FlatMessageBox
 {
     public class InputBox
     {
-        public static InputResult Show(IWin32Window ventana, string title , string Question, bool ShowCancelButton=false,string DefaultValue= null)
+        public static InputResult Show(IWin32Window ventana, string title , string Question, bool ShowCancelButton=false,bool PasswordChar=false,string DefaultValue= null)
         {
-            FlatInputBox Input = new FlatInputBox();
-            InputResult result = new InputResult();
+            using (FlatInputBox Input = new FlatInputBox())
+            {
+                InputResult result = new InputResult();
 
-            Input.Title.Text = title;
-            Input.txtquestion.Text = Question;
-            Input.btnAcept.DialogResult = DialogResult.OK;
-            Input.btnCancel.DialogResult = DialogResult.Cancel;
-            Input.btnCancel.Visible = (ShowCancelButton) ? true : false;
-            Input.txtinputdata.Text = DefaultValue;
-            result.Canceled = (Input.ShowDialog(ventana) == DialogResult.OK) ? false : true;
-            result.Data = Input.txtinputdata.Text;
+                Input.Title.Text = title;
+                Input.txtquestion.Text = Question;
+                Input.btnAcept.DialogResult = DialogResult.OK;
+                Input.btnCancel.DialogResult = DialogResult.Cancel;
+                Input.btnCancel.Visible = (ShowCancelButton) ? true : false;
+                Input.txtinputdata.Text = DefaultValue;
+                Input.txtinputdata.UseSystemPasswordChar = PasswordChar;
+                result.Canceled = (Input.ShowDialog(ventana) == DialogResult.OK) ? false : true;
+                result.Data = Input.txtinputdata.Text;
 
-            return result;
+                return result;
+            }
+           
             
 
                 

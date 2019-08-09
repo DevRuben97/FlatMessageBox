@@ -33,7 +33,7 @@ namespace FlatMessageBox
             sombra.TopMost = true;
             sombra.Show();*/
             
-            mensaje.Title.Text = title;
+            mensaje.txtTitle.Text = title;
             mensaje.txtBodyText.Text = body;
             switch (botones) // Evaluar el boton elegido por el desarrollador
             {
@@ -113,7 +113,7 @@ namespace FlatMessageBox
             sombra.Show();*/
 
 
-            mensaje.Title.Text = "Atención:";
+            mensaje.txtTitle.Text = "Atención:";
             mensaje.txtBodyText.Text = Body;
             mensaje.IconImage.Image = Properties.Resources.Warning;
             mensaje.btnAcept.Visible = false;

@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMostar = new System.Windows.Forms.Button();
             this.btnInputBox = new System.Windows.Forms.Button();
+            this.btnLoading = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,11 +45,11 @@
             // 
             // btnMostar
             // 
-            this.btnMostar.Location = new System.Drawing.Point(225, 128);
+            this.btnMostar.Location = new System.Drawing.Point(16, 128);
             this.btnMostar.Name = "btnMostar";
             this.btnMostar.Size = new System.Drawing.Size(109, 23);
             this.btnMostar.TabIndex = 1;
-            this.btnMostar.Text = "Mostrar";
+            this.btnMostar.Text = "MessageBox";
             this.btnMostar.UseVisualStyleBackColor = true;
             this.btnMostar.Click += new System.EventHandler(this.btnMostar_Click);
             // 
@@ -62,11 +63,22 @@
             this.btnInputBox.UseVisualStyleBackColor = true;
             this.btnInputBox.Click += new System.EventHandler(this.btnInputBox_Click);
             // 
+            // btnLoading
+            // 
+            this.btnLoading.Location = new System.Drawing.Point(16, 174);
+            this.btnLoading.Name = "btnLoading";
+            this.btnLoading.Size = new System.Drawing.Size(109, 23);
+            this.btnLoading.TabIndex = 3;
+            this.btnLoading.Text = "LoadingBox";
+            this.btnLoading.UseVisualStyleBackColor = true;
+            this.btnLoading.Click += new System.EventHandler(this.BtnLoading_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 264);
+            this.Controls.Add(this.btnLoading);
             this.Controls.Add(this.btnInputBox);
             this.Controls.Add(this.btnMostar);
             this.Controls.Add(this.label1);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMostar;
         private System.Windows.Forms.Button btnInputBox;
+        private System.Windows.Forms.Button btnLoading;
     }
 }
 
